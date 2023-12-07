@@ -6,6 +6,11 @@ import multer from "multer";
 import sql from "mssql";
 
 import userRouter from "./routes/users.js";
+import productRouter from "./routes/products.js";
+import cartRouter from "./routes/cart.js";
+import addressRouter from "./routes/address.js";
+import branchRouter from "./routes/branch.js";
+import orderRouter from "./routes/order.js";
 import db from "./db.js";
 
 const app = express();
@@ -49,4 +54,9 @@ sql.connect(db, (err) => {
 ////////////////////////////////////////////////////////////////////////////////
 
 // TODO BELOW
-app.use('/users', userRouter)
+app.use('/users', userRouter);
+app.use('/products', productRouter);
+app.use('/cart', cartRouter);
+app.use('/address', addressRouter);
+app.use('/branch', branchRouter);
+app.use('/order', orderRouter);

@@ -3,7 +3,7 @@ export default {
     port: 1433,
     user: "sa",
     password: "1",
-    database: "csdl",
+    database: "tgdd",
     options: {
         trustServerCertificate: true
     }

@@ -1,7 +1,7 @@
 import express from "express";
-import { login } from "../controllers/user.js";
+import { getBranches } from "../controllers/branch.js";
 
 const router = express.Router();
-router.post("/login", login);
+router.get("/", getBranches);
 
 export default router;
